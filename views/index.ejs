@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Census App</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+</head>
+<body>
+    <header>
+        <img src="/images/census.png" class="logo">
+        <button class="login-button">Log In</button>
+    </header>
+  <div class="main-container">
+      <h1>Welcome to Census App!</h1>
+      <h5>Here you can see the participants</h5>
+      <div class="button-container">
+        <a href="https://odd-jade-pig-robe.cyclic.app/participants">
+          <button>All</button>
+        </a>      
+        <a href="https://odd-jade-pig-robe.cyclic.app/participants/details">
+          <button>Active</button>
+        </a>     
+        <a href="https://odd-jade-pig-robe.cyclic.app/participants/details/deleted">
+          <button>Deleted</button>
+        </a> 
+        <a href="https://odd-jade-pig-robe.cyclic.app/participants/work/:email">
+          <button>Work</button>
+        </a> 
+        <a href="https://odd-jade-pig-robe.cyclic.app/participants/home/:email">
+          <button>Home</button>
+        </a>  
+      </div>
+  </div>
+    <footer>
+        <p>Census Application © 2023</p>
+    </footer>
+</body>
 </html>
