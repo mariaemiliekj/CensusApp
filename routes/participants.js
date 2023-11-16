@@ -105,7 +105,7 @@ router.get('/details', async (req, res) => {
 
         const activeParticipantsDetails = allParticipantsDetails
             .filter(participant => participant && participant.props && participant.props.active)
-            .map(({ props }) => ({ firstname: props.firstname, lastname: props.lastname, dob: props.dob, active: props.active }));
+            .map(({ props }) => ({ firstname: props.firstname, lastname: props.lastname, dob: props.dob}));
 
         res.status(200).json(activeParticipantsDetails);
     } catch (error) {
@@ -134,8 +134,8 @@ router.get('/details/deleted', async (req, res) => {
 const deletedParticipantsDetails = allParticipantsDetails
     .filter(participant => participant && participant.props && participant.props.active === false)
     .map(participant => {
-        const { firstname, lastname, dob, active } = participant.props || {};
-        return { firstname, lastname, dob, active };
+        const { firstname, lastname, dob } = participant.props || {};
+        return { firstname, lastname, dob };
     });
 
         res.status(200).json(deletedParticipantsDetails);
@@ -222,7 +222,7 @@ router.get('/home/:email', async (req, res) => {
 
 
 
-/////////////////DELETING / UPDATING THE PARTICIPANT/////////////////77
+/////////////////DELETING / UPDATING THE PARTICIPANT/////////////////
 
 
 
